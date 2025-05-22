@@ -1,16 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-interface CategoryProps {
-  category: {
-    id: number;
-    title: string;
-    image: string;
-    slug: string;
-  };
-}
+type Category = {
+  id: number;
+  title: string;
+  image: string;
+  slug: string;
+};
 
-const CategoryCard: React.FC<CategoryProps> = ({ category }) => {
+type CategoryProps = {
+  category: Category;
+};
+
+const CategoryCard = ({ category }: CategoryProps) => {
   return (
     <Link
       to={`/category/${category.slug}`}

@@ -1,16 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-interface ProductProps {
-  product: {
-    id: number;
-    title: string;
-    image: string;
-    slug: string;
-    price: string;
-  };
-}
-const ProductCard: React.FC<ProductProps> = ({ product }) => {
+type Product = {
+  id: number;
+  title: string;
+  image: string;
+  slug: string;
+  price: string;
+};
+
+type ProductProps = {
+  product: Product;
+};
+
+const ProductCard = ({ product }: ProductProps) => {
   return (
     <Link
       to={`/category/${product.slug}`}
@@ -26,21 +29,21 @@ const ProductCard: React.FC<ProductProps> = ({ product }) => {
         {/* Button appears at bottom over image on hover */}
         <button
           className="
-              absolute bottom-4 left-1/2 transform -translate-x-1/2
-              bg-transparent 
-             py-1
-              w-full
-              text-[18px] text-black
-              opacity-0
-              group-hover:opacity-100
-              transition-opacity
-              hover:text-[#b08d57]
-              cursor-pointer
-              shadow
-              border-[2px]
-              hover:text-white transition
-              hover:bg-black border-black
-            "
+            absolute bottom-4 left-1/2 transform -translate-x-1/2
+            bg-transparent 
+            py-1
+            w-full
+            text-[18px] text-black
+            opacity-0
+            group-hover:opacity-100
+            transition-opacity
+            hover:text-[#b08d57]
+            cursor-pointer
+            shadow
+            border-[2px]
+            hover:text-white transition
+            hover:bg-black border-black
+          "
           type="button"
         >
           Add to Cart

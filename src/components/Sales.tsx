@@ -4,7 +4,7 @@ import SaleCard from "./SaleCard";
 import Sofa from "../assets/saleSection/sofa.webp";
 import Bed from "../assets/saleSection/bed.webp";
 
-const SalesSection: React.FC = () => {
+const SalesSection = () => {
   return (
     <div className="max-w-8xl mx-auto px-6 py-4 flex gap-4">
       <SaleCard

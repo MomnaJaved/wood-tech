@@ -1,58 +1,11 @@
 import React from "react";
 import Slider from "react-slick";
-import partner1 from "../assets/trusted/partner-1.svg";
-import partner2 from "../assets/trusted/partner-2.svg";
-import partner3 from "../assets/trusted/partner-3.svg";
-import partner4 from "../assets/trusted/partner-4.svg";
-import partner5 from "../assets/trusted/partner-5.svg";
-import partner6 from "../assets/trusted/partner-6.svg";
 import starIcon from "../assets/trusted/starburst.png";
-
-// Import slick-carousel css styles
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import TrustedCard from "./TrustedCard";
 
-export type Partner = {
-  id: number;
-  slug: string;
-  image: string;
-};
+import { partners } from "../constants/partners";
 
-const partners: Partner[] = [
-  {
-    id: 1,
-    image: partner1,
-    slug: "new-seat-tools",
-  },
-  {
-    id: 2,
-    image: partner2,
-    slug: "new-seat-tools",
-  },
-  {
-    id: 3,
-    image: partner3,
-    slug: "new-seat-tools",
-  },
-  {
-    id: 4,
-    image: partner4,
-    slug: "new-seat-tools",
-  },
-  {
-    id: 5,
-    image: partner5,
-    slug: "new-seat-tools",
-  },
-  {
-    id: 6,
-    image: partner6,
-    slug: "new-seat-tools",
-  },
-];
-
-const NewProducts: React.FC = () => {
+const Partners = () => {
   const settings = {
     dots: false,
     infinite: true,
@@ -103,4 +56,4 @@ const NewProducts: React.FC = () => {
   );
 };
 
-export default NewProducts;
+export default Partners;

@@ -6,8 +6,6 @@ import product2 from "../assets/productCategory/product-2.jpg";
 import product3 from "../assets/productCategory/product-3.jpg";
 import chairIcon from "../assets/productCategory/chairIcon.png";
 import { PrevArrow, NextArrow } from "./CustomArrows";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 export type Category = {
   id: number;
@@ -32,7 +30,7 @@ const categories: Category[] = [
   },
 ];
 
-const ProductCategories: React.FC = () => {
+const ProductCategories = () => {
   const settings = {
     dots: false,
     infinite: true,

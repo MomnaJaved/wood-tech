@@ -1,72 +1,12 @@
 import React from "react";
 import Slider from "react-slick";
-import product2 from "../assets/featuredProducts/product-2.webp";
-import product3 from "../assets/featuredProducts/product-3.webp";
-import product4 from "../assets/featuredProducts/product-4.webp";
-import product5 from "../assets/featuredProducts/product-5.webp";
-import product6 from "../assets/featuredProducts/product-6.webp";
-import product7 from "../assets/featuredProducts/product-7.jpg";
 import bedIcon from "../assets/featuredProducts/bedIcon.png";
 import { PrevArrow, NextArrow } from "./CustomArrows";
-// Import slick-carousel css styles
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import ProductCard from "./ProductCard";
 
-export type Product = {
-  id: number;
-  title: string;
-  slug: string;
-  image: string;
-  price: string;
-};
+import { products } from "../constants/products";
 
-const products: Product[] = [
-  {
-    id: 1,
-    title: "Luxury Leather Armchair",
-    image: product2,
-    slug: "new-seat-tools",
-    price: "24,999.00",
-  },
-  {
-    id: 2,
-    title: "Elegant Dining Table With Chairs",
-    image: product3,
-    slug: "modern-lamp-accessories",
-    price: "35,499.00",
-  },
-  {
-    id: 3,
-    title: "Compact Storage Cabinet",
-    image: product4,
-    slug: "furniture-maintenance",
-    price: "8,499.00",
-  },
-  {
-    id: 4,
-    title: "Vintage Wooden Side Table",
-    image: product5,
-    slug: "furniture-maintenance",
-    price: "7,999.00",
-  },
-  {
-    id: 5,
-    title: "Contemporary Sofa Set",
-    image: product6,
-    slug: "furniture-maintenance",
-    price: "12,999.00",
-  },
-  {
-    id: 6,
-    title: "Modern Wooden Coffee Table",
-    image: product7,
-    slug: "furniture-maintenance",
-    price: "12,999.00",
-  },
-];
-
-const FeaturedProducts: React.FC = () => {
+const FeaturedProducts = () => {
   const settings = {
     dots: false,
     infinite: true,
@@ -115,7 +55,7 @@ const FeaturedProducts: React.FC = () => {
           ))}
         </Slider>
         <div className="flex flex-col items-center mt-4">
-          <button className=" border-2 border-white text-white font-bold py-3 px-10 bg-[#b08d57] transition z-10  transition-colors transition-transform hover:scale-110 focus:outline-none">
+          <button className="border-2 border-white text-white font-bold py-3 px-10 bg-[#b08d57] transition z-10 transition-colors transition-transform hover:scale-110 focus:outline-none">
             All Products
           </button>
         </div>

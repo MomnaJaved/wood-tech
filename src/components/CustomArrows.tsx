@@ -1,16 +1,12 @@
 import React from "react";
 
-interface ArrowProps {
+type ArrowProps = {
   className?: string;
   style?: React.CSSProperties;
   onClick?: () => void;
-}
+};
 
-export const PrevArrow: React.FC<ArrowProps> = ({
-  className,
-  style,
-  onClick,
-}) => (
+export const PrevArrow = ({ className, style, onClick }: ArrowProps) => (
   <button
     className={`
       absolute z-10 left-[-10px] top-[40%] transform -translate-y-1/2
@@ -19,6 +15,7 @@ export const PrevArrow: React.FC<ArrowProps> = ({
       transition-colors transition-transform
       hover:scale-110
       focus:outline-none
+      ${className ?? ""}
     `}
     style={{ ...style }}
     onClick={onClick}
@@ -29,7 +26,7 @@ export const PrevArrow: React.FC<ArrowProps> = ({
       className="w-6 h-6"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth={2}
       viewBox="0 0 24 24"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -39,11 +36,7 @@ export const PrevArrow: React.FC<ArrowProps> = ({
   </button>
 );
 
-export const NextArrow: React.FC<ArrowProps> = ({
-  className,
-  style,
-  onClick,
-}) => (
+export const NextArrow = ({ className, style, onClick }: ArrowProps) => (
   <button
     className={`
       absolute z-10 right-[-10px] top-[40%] transform -translate-y-1/2
@@ -52,6 +45,7 @@ export const NextArrow: React.FC<ArrowProps> = ({
       transition-colors transition-transform
       hover:scale-110
       focus:outline-none
+      ${className ?? ""}
     `}
     style={{ ...style }}
     onClick={onClick}
@@ -62,7 +56,7 @@ export const NextArrow: React.FC<ArrowProps> = ({
       className="w-6 h-6"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth={2}
       viewBox="0 0 24 24"
       strokeLinecap="round"
       strokeLinejoin="round"
